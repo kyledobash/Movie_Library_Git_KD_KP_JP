@@ -33,7 +33,8 @@ namespace WebAPISample.Controllers
         {
             // Retrieve movie by id from db logic
             // return Ok(movie);
-            return Ok();
+            var selectedMovie = _context.Movies.Where(m => m.MovieId == id);
+            return Ok(selectedMovie);
         }
 
         // POST api/movie
