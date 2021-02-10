@@ -21,12 +21,12 @@ namespace WebAPISample.Data
                 .HasData(
                 new Movie
                 {
-                    Title = "",
-                    Genre = "",
-                    Director = "",
+                    MovieId = 1,
+                    Title = "Pulp Fiction",
+                    Genre = "Crime",
+                    Director = "Quentin Tarantino",
                 }
              );
-
         }
 
         public DbSet<Movie> Movies { get; set; }
