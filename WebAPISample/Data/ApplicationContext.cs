@@ -3,6 +3,7 @@ using WebAPISample.Models;
 
 namespace WebAPISample.Data
 {
+
     public class ApplicationContext : DbContext
     {
         public ApplicationContext(DbContextOptions options)
@@ -15,7 +16,17 @@ namespace WebAPISample.Data
         {
             base.OnModelCreating(modelBuilder);
             // Seed data - needs migration
-           
+
+                modelBuilder.Entity<Movie>()
+                .HasData(
+                new Movie
+                {
+                    Title = "",
+                    Genre = "",
+                    Director = "",
+                }
+             );
+
         }
 
         public DbSet<Movie> Movies { get; set; }
