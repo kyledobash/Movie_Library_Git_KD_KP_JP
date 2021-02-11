@@ -45,7 +45,7 @@ namespace WebAPISample.Controllers
             _context.Add(value);
             _context.SaveChanges();
 
-            return Ok(_context);
+            return Ok();
         }
 
         // PUT api/movie
@@ -56,7 +56,7 @@ namespace WebAPISample.Controllers
             _context.Update(movie);
             _context.SaveChanges();
 
-            return Ok(_context);
+            return Ok();
         }
 
         // DELETE api/movie/5
@@ -66,7 +66,8 @@ namespace WebAPISample.Controllers
             // Delete movie from db logic
             var selectedMovie = _context.Movies.Where(m => m.MovieId == id);
             _context.Remove(selectedMovie);
-            return Ok(_context);
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }
