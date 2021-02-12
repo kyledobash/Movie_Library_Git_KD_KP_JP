@@ -2,7 +2,8 @@
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
-        	Director: this["director"].value
+        	Director: this["director"].value,
+            Genre: this["genre"].value
         };
 
         $.ajax({
@@ -24,3 +25,37 @@
 
     $('#my-form').submit( processForm );
 })(jQuery);
+
+$(document).ready(function(){
+    $.get("https://localhost:44325/api/movie", function(data){
+        <table>
+        <th>
+            Title
+        </th>
+        <th>
+            Director
+        </th>
+        <th>
+            Genre
+        </th>
+        </table>
+
+        for(let i = 0; i < data.length; i++){
+            $("#movies").append(`<div id='movies'><tr>
+            <td>Title: ${JSON.stringify(data[i].title)}</td>
+            <td>Director: ${JSON.stringify(data[i].director)}</td>
+            <td>Genre: ${JSON.stringify(data[i].genre)}</td>
+            </tr></div>`);
+        }
+        
+        // data.map(function(el){
+        //     $("#movies").append(`<div>
+        //     <div>Title: ${JSON.stringify(el.title)}</div>
+        //     <div>Director: ${JSON.stringify(el.director)}</div>
+        //     <div>Genre: ${JSON.stringify(el.genre)}</div>
+        //     </div><br>`);
+        // })
+        //$("#movie1").css("color", "red")
+    // console.log(data);
+    })
+})
