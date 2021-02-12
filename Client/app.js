@@ -51,14 +51,10 @@ function updateMovie(){
         contentType: 'application/json',
         data: JSON.stringify(dict),
         success: function( data, textStatus, jQxhr ){
-            if(data.success == true){ // if true (1)
-                setTimeout(function(){// wait for 5 secs(2)
-                     location.reload(); // then reload the page.(3)
-                }, 500); 
-             }          
+            location.reload();     
         },
         error: function( jqXhr, textStatus, errorThrown ){
-            console.log( errorThrown );
+            location.reload();
         }
     });
 
@@ -79,10 +75,10 @@ function updateMovie(){
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
+                location.reload();
             },
             error: function( jqXhr, textStatus, errorThrown ){
-                console.log( errorThrown );
+                location.reload();
             }
         });
 
