@@ -16,6 +16,31 @@
         }
         h1 {
             border: 5px;
+            padding: 0px;
+            margin: 0%;
+            text-shadow: 1px 1px gray;
+            text-decoration: underline
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            box-shadow: 2px 2px black;
+        }
+        th, td {
+            text-align: center;
+            padding: 5px;
+        }
+        img {
+            max-width: 20%;
+            height: auto;
+            padding: 10px;
+            margin: 0%;           
+        }
+        tbody>tr>:nth-child(1){
+            font-style: italic;
+        }
+        th {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -23,17 +48,16 @@
 
 
     <h1>Movie Library</h1>
-    <!-- <div id='movies'>
-    </div>    -->
+    <img src=http://clipart-library.com/images_k/movie-reel-transparent-background/movie-reel-transparent-background-4.png></img>
 
     <center>
         <table id="movies">
             <tr>    
-                <th id="id">Title</th>
-                    <th id="emp">Director</th>
-                        <th id="age">Genre</th>
-            </tr>
-        
+                <th id="title">Title</th>
+                    <th id="director">Director</th>
+                        <th id="genre">Genre</th>
+                            <th id="empty"></th>
+            </tr>        
         </table>
     </center>   
 
