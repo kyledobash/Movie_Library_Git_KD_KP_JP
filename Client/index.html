@@ -52,7 +52,7 @@
     </style>
 </head>
 <body>
-
+        
 
     <h1>Movie Library</h1>
     <img src=http://clipart-library.com/images_k/movie-reel-transparent-background/movie-reel-transparent-background-4.png></img>
@@ -82,13 +82,14 @@
     <button type="submit" id="form-buttons">Add Movie</button>
 </form>
 
-<form id="edit-movie">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="Director" />
-    <input type="text" name="genre" placeholder="Genre" />
 
-    <button type="submit" id="form-buttons">Submit Edit</button>
-</form>
+    <input type="hidden" id="updateMovieId">
+    <input id="updateMovieTitle" name="title" placeholder="Title" />
+    <input id="updateMovieDirector" type="text" name="director" placeholder="Director" />
+    <input id="updateMovieGenre" type="text" name="genre" placeholder="Genre" />
+
+    <button onclick="updateMovie()" id="form-buttons">Submit Edit</button>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>
