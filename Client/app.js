@@ -27,25 +27,15 @@
 })(jQuery);
 
 $(document).ready(function(){
-    $.get("https://localhost:44325/api/movie", function(data){
-        <table>
-        <th>
-            Title
-        </th>
-        <th>
-            Director
-        </th>
-        <th>
-            Genre
-        </th>
-        </table>
+   
+    $.get("https://localhost:44325/api/movie", function(data){        
 
         for(let i = 0; i < data.length; i++){
-            $("#movies").append(`<div id='movies'><tr>
+            $("#movies").append(`<tr>
             <td>Title: ${JSON.stringify(data[i].title)}</td>
             <td>Director: ${JSON.stringify(data[i].director)}</td>
             <td>Genre: ${JSON.stringify(data[i].genre)}</td>
-            </tr></div>`);
+            </tr>`);
         }
         
         // data.map(function(el){
