@@ -34,7 +34,8 @@
         	Director: this["director"].value,
             Genre: this["genre"].value
         };
-
+        
+        $("#Save").click(function () {
         $.ajax({
             url: 'https://localhost:44325/api/movie',
             dataType: 'json',
@@ -48,11 +49,11 @@
                 console.log( errorThrown );
             }
         });
-
+    });
         e.preventDefault();
     }
 
-    $('#edit').submit( processForm );
+    $('#edit-movie').submit( processForm );
 })(jQuery);
 
 
@@ -68,9 +69,8 @@ $(document).ready(function(){
             <td>${JSON.stringify(data[i].title)}</td>
             <td>${JSON.stringify(data[i].director)}</td>
             <td>${JSON.stringify(data[i].genre)}</td>
-            <td><button type="submit" id="edit">Edit</button></td>
+            <td><button type="submit" id="edit" onclick="">Edit</button></td>
             </tr>`);
-        }
-        
+        }        
     })
 })
