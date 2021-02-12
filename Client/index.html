@@ -3,6 +3,21 @@
 <head>
     <title>jQuery AJAX POST Form</title>
     <meta charset="utf-8">
+    <style>       
+        html {
+            background-image: linear-gradient(to bottom right, white, gray);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            border: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,15 +26,16 @@
     <!-- <div id='movies'>
     </div>    -->
 
-    <table id="movies">
-        <tr>    
-            <th id="id">Title</th>
-                <th id="emp">Director</th>
-                    <th id="age">Genre</th>
-        </tr>
+    <center>
+        <table id="movies">
+            <tr>    
+                <th id="id">Title</th>
+                    <th id="emp">Director</th>
+                        <th id="age">Genre</th>
+            </tr>
         
-    </table>
-
+        </table>
+    </center>   
 
 
 
@@ -32,7 +48,7 @@
     <input type="text" name="director" placeholder="Director" />
     <input type="text" name="genre" placeholder="Genre" />
 
-    <button type="submit">Submit</button>
+    <button type="submit">Add Movie</button>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
