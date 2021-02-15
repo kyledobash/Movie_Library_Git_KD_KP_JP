@@ -11,6 +11,13 @@ $(document).ready(function(){
             </tr>`);
         }        
     })
+        $("#search-input").on("keyup", function(){
+            var value = $(this).val().toLowerCase();
+            $("#movies tr").filter(function(){
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                console.log("value")
+            });
+        });
 })
 
 function populateUpdate(movieId){
